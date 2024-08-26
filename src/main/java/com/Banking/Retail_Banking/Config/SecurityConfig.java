@@ -16,7 +16,7 @@ public class SecurityConfig extends WebSecurityConfiguration{
 	protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests()
-                .requestMatchers("/public/**").permitAll() 
+                .requestMatchers("/public").permitAll() 
                 .anyRequest().authenticated() 
                 .and()
             .formLogin()
